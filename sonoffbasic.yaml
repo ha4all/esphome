@@ -54,7 +54,7 @@ improv_serial:
 
 binary_sensor:
   - platform: gpio
-    id: "${name}_push_button"
+    id: "push button"
     pin:
       number: GPIO0
       mode: INPUT_PULLUP

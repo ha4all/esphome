@@ -1,5 +1,5 @@
 {
-  "name": "Template Project",
+  "name": "Template ha4all esphome",
   "version": "2022.1.2",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,

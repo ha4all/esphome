@@ -7,8 +7,7 @@ on:
 
 jobs:
   build:
-    uses: ha4all/workflows/.github/workflows/publish.yml@main  
-#    uses: esphome/workflows/.github/workflows/publish.yml@main
+    uses: esphome/workflows/.github/workflows/publish.yml@main
     with:
       # CHANGEME: Set the filenames of your config files here:
       files: project-template-esp32.yaml,project-template-esp8266.yaml,sonoffbasic.yaml

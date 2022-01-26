@@ -1,5 +1,5 @@
 {
-  "name": "Template ha4all esphome",
+  "name": "Template ha4all esphome sonoff basic",
   "version": "2022.1.2",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,

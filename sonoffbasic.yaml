@@ -100,3 +100,17 @@ sensor:
 button:
   - platform: restart
     name: "${name} Restart"
+    
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: ${name} IP Address
+    ssid:
+      name: ${name} conected SSID
+    bssid:
+      name: ${name} Connected BSSID
+    mac_address:
+      name: ${name} Mac Wifi Address
+    scan_results:
+      name: ${name} Latest Scan Results    
+      

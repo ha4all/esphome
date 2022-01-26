@@ -1,6 +1,6 @@
 # These substitutions allow the end user to override certain values
 substitutions:
-  name: "esphome4sonoff"
+  name: "HA4all"
 
 esphome:
   name: "${name}"
@@ -12,7 +12,7 @@ esphome:
   # configuration and updates.
   project:
     name: ysovon.esphome-for-sonoffbasic
-    version: "0.1"
+    version: "0.2"
 
 
   platform: ESP8266
@@ -54,7 +54,7 @@ improv_serial:
 
 binary_sensor:
   - platform: gpio
-    id: "${name} push_button"
+    id: "${name}_push_button"
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
@@ -73,7 +73,7 @@ binary_sensor:
 switch:
   # The relay switches on the red side of the LED when active.
   - platform: gpio
-    name: "${name} Relay"
+    name: "${name}_Relay"
     pin: GPIO12
     id: relay
     on_turn_off:

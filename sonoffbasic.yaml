@@ -12,7 +12,7 @@ esphome:
   # configuration and updates.
   project:
     name: ha4all.esphome-for-sonoffbasic
-    version: "0.3"
+    version: "0.4"
 
 
   platform: ESP8266
@@ -73,7 +73,7 @@ binary_sensor:
 switch:
   # The relay switches on the red side of the LED when active.
   - platform: gpio
-    name: "${name}_Relay"
+    name: "${name} Relay"
     pin: GPIO12
     id: relay
     on_turn_off:
@@ -94,3 +94,9 @@ switch:
 sensor:
   - platform: uptime
     name: "${name} Uptime Sensor"    
+  - platform: wifi_signal
+    name: "${name} WiFi Signal Sensor"
+    update_interval: 60s
+button:
+  - platform: restart
+    name: "${name} Restart"

@@ -13,10 +13,17 @@ esphome:
   project:
     name: ha4all.esphome-for-sonoffbasic
     version: "0.4"
-
+external_components:
+  - source:
+      type: git
+      path: https://github.com/trombik/esphome-component-ping
+      ref: main
 
   platform: ESP8266
   board: esp8285
+    libraries:
+    - ESP8266WiFi
+    - https://github.com/akaJes/AsyncPing#95ac7e4
 
 # To be able to get logs from the device via serial and api.
 logger:
@@ -97,6 +104,38 @@ sensor:
   - platform: wifi_signal
     name: "${name} WiFi Signal Sensor"
     update_interval: 60s
+# ping sensor
+  - platform: ping
+
+    # IP address of the target
+    ip_address: 8.8.8.8
+
+    # number of packets to send
+    num_attempts: 17
+
+    # the timeout. however, this is not what you usually expect from `ping`
+    # implementation: the timeout is also the interval to send packets. if you
+    # set this value to 10 sec, and the network is fine (no packet loss), then
+    # the component sends a packet at 10 sec interval, and the total time to
+    # finish would be 10 sec * num_attempts = 10 * 17 = 170 sec.
+    timeout: 1sec
+
+    loss:
+      # the name to be shown.
+      name: Packet loss
+
+    latency:
+      # the name to be shown.
+      name: Latency
+      # this should be 3 as the value is float, unit is sec, and the raw
+      # values are in ms.
+      accuracy_decimals: 3
+
+    # the interval for checking the sensors. defaults to 60s.
+    update_interval: 30s    
+##    
+    
+    
 button:
   - platform: restart
     name: "${name} Restart"

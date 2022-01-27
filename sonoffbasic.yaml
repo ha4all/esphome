@@ -8,6 +8,13 @@ esphome:
   # so you can use a single firmware for all devices
   name_add_mac_suffix: true
 
+external_components:
+  - source:
+      type: git
+      path: https://github.com/trombik/esphome-component-ping
+      ref: main
+    components: [ping]  
+      
   # This will allow for (future) project identification,
   # configuration and updates.
   project:

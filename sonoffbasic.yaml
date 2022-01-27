@@ -13,11 +13,7 @@ esphome:
   project:
     name: ha4all.esphome-for-sonoffbasic
     version: "0.4"
-external_components:
-  - source:
-      type: git
-      path: https://github.com/trombik/esphome-component-ping
-      ref: main
+
 
   platform: ESP8266
   board: esp8285

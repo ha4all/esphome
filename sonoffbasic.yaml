@@ -119,4 +119,5 @@ text_sensor:
       name: ${name} Mac Wifi Address
     scan_results:
       name: ${name} Latest Scan Results    
-      
+  - platform: version
+    name: "ESPHome Version"

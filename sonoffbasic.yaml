@@ -14,7 +14,7 @@ esphome:
   # configuration and updates.
   project:
     name: ha4all.esphome-for-sonoffbasic
-    version: "0.4"
+    version: "0.5"
 
 
   platform: ESP8266

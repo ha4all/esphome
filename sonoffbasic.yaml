@@ -97,8 +97,8 @@ output:
     id: relay
 light:
   - platform: binary
-    name: "${name} Light"
-    id: light
+    name: "${name} bulb"
+    id: bulb
     output: relay
     
 sensor:

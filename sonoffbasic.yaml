@@ -92,7 +92,11 @@ switch:
       number: GPIO13
       inverted: True
 
-
+light:
+  - platform: binary
+    name: "${name} Light"
+    id: light_1
+    output: relay
     
 sensor:
   - platform: uptime

@@ -95,7 +95,7 @@ switch:
 light:
   - platform: binary
     name: "${name} Light"
-    id: light_1
+    id: light
     output: relay
     
 sensor:

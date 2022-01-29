@@ -91,15 +91,7 @@ switch:
     pin:
       number: GPIO13
       inverted: True
-output:
-  - platform: gpio
-    pin: GPIO12
-    id: relay
-light:
-  - platform: binary
-    name: "${name} bulb"
-    id: bulb
-    output: relay
+
     
 sensor:
   - platform: uptime
